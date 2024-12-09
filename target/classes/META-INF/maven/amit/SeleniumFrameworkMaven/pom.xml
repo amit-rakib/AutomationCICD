@@ -1,0 +1,166 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>amit</groupId>
+  <artifactId>SeleniumFrameworkMaven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SeleniumFrameworkMaven</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <!-- JUnit for Unit Testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Selenium for Browser Automation 
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.27.0</version>
+    </dependency>-->
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.10.0</version>
+</dependency>
+
+
+    <!-- Jackson Databind for JSON Processing -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.15.2</version>
+    </dependency>
+
+    <!-- TestNG for Test Management -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- ExtentReports for Test Reporting -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.1.2</version>
+    </dependency>
+    <dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>2.0.7</version>
+</dependency>
+
+
+    <!-- Missing Dependencies (Ensure these are added to your local or remote repository) 
+    <dependency>
+      <groupId>SeleniumFour</groupId>
+      <artifactId>SeleniumFour</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>AssignmentEight</groupId>
+      <artifactId>AssignmentEight</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>  -->
+    <dependency> 
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+
+  </dependencies>
+
+<!-- <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+--> 
+  <profiles>
+    <profile>
+      <id>Regression</id>
+        <build>
+    <pluginManagement>
+      <plugins>
+        <!-- Maven Surefire Plugin for Running Tests -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+      </build>
+    </profile>
+      <profile>
+      <id>Purchase</id>
+        <build>
+    <pluginManagement>
+      <plugins>
+        <!-- Maven Surefire Plugin for Running Tests -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testSuites/Purchase.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+      </build>
+    </profile>
+      <profile>
+      <id>ErrorValidation</id>
+        <build>
+    <pluginManagement>
+      <plugins>
+        <!-- Maven Surefire Plugin for Running Tests -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.5.2</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testSuites/ErrorValidationTests.xml</suiteXmlFile>
+            </suiteXmlFiles>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+</project>
+

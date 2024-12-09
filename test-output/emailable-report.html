@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Submit Order Test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">8,496</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">0</td><td class="num">9,839</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num attn">5</th><th class="num">0</th><th class="num">0</th><th class="num">18,335</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Submit Order Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="4">amit.SubmitOrderTest</td><td><a href="#m0">launchApplocation</a></td><td rowspan="2">1733762396274</td><td rowspan="2">6094</td></tr><tr class="failedeven"><td><a href="#m1">launchApplocation</a></td></tr><tr class="failedeven"><td><a href="#m2">tearDown</a></td><td rowspan="2">1733762402384</td><td rowspan="2">1</td></tr><tr class="failedeven"><td><a href="#m3">tearDown</a></td></tr><tr><th colspan="4">Submit Order Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">amit.SubmitOrderTest</td><td><a href="#m4">OrderHistoryTest</a></td><td rowspan="1">1733762404669</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">SubmitOrder</a></td><td rowspan="2">1733762404659</td><td rowspan="2">0</td></tr><tr class="skippedeven"><td><a href="#m6">SubmitOrder</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Error Validations Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="4">amit.ErrorValidations</td><td><a href="#m7">launchApplocation</a></td><td rowspan="2">1733762396188</td><td rowspan="2">7326</td></tr><tr class="failedeven"><td><a href="#m8">launchApplocation</a></td></tr><tr class="failedeven"><td><a href="#m9">tearDown</a></td><td rowspan="2">1733762403520</td><td rowspan="2">0</td></tr><tr class="failedeven"><td><a href="#m10">tearDown</a></td></tr><tr><th colspan="4">Error Validations Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">amit.ErrorValidations</td><td><a href="#m11">LoginErrorValidation</a></td><td rowspan="1">1733762403516</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m12">ProductErrorValidation</a></td><td rowspan="1">1733762406008</td><td rowspan="1">0</td></tr></tbody>
+</table>
+<h2>Submit Order Test</h2><h3 id="m0">amit.SubmitOrderTest#launchApplocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">amit.SubmitOrderTest#launchApplocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">amit.SubmitOrderTest#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
+	at amit.TestComponents.BaseTest.tearDown(BaseTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">amit.SubmitOrderTest#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
+	at amit.TestComponents.BaseTest.tearDown(BaseTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">amit.SubmitOrderTest#OrderHistoryTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method amit.SubmitOrderTest.OrderHistoryTest() on instance amit.SubmitOrderTest@28194a50 depends on not successfully finished methods 
+[amit.SubmitOrderTest.SubmitOrder() on instance amit.SubmitOrderTest@28194a50]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">amit.SubmitOrderTest#SubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Iamking@000, product=ADIDAS ORIGINAL, email=anshika@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">amit.SubmitOrderTest#SubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Amit1120@, product=ZARA COAT 3, email=amitrakib@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Error Validations Test</h2><h3 id="m7">amit.ErrorValidations#launchApplocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">amit.ErrorValidations#launchApplocation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">amit.ErrorValidations#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
+	at amit.TestComponents.BaseTest.tearDown(BaseTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">amit.ErrorValidations#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
+	at amit.TestComponents.BaseTest.tearDown(BaseTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">amit.ErrorValidations#LoginErrorValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:29)
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:98)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:87)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
+	at amit.TestComponents.BaseTest.initializeDriver(BaseTest.java:52)
+	at amit.TestComponents.BaseTest.launchApplocation(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: org.openqa.selenium.WebDriverException: Unsuccessful command executed: [/var/folders/83/29syyspx2_dfxh52lb7pyk600000gn/T/selenium-manager4955469509911255742030059769610765/selenium-manager, --browser, chrome, --output, json]
+The chromedriver version cannot be discovered
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;15.0.1&apos;, java.version: &apos;23.0.1&apos;
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.manager.SeleniumManager.runCommand(SeleniumManager.java:130)
+	at org.openqa.selenium.manager.SeleniumManager.getDriverPath(SeleniumManager.java:251)
+	at org.openqa.selenium.remote.service.DriverFinder.getPath(DriverFinder.java:27)
+	... 30 more
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">amit.ErrorValidations#ProductErrorValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
+	at amit.TestComponents.BaseTest.tearDown(BaseTest.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

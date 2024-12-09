@@ -1,0 +1,8 @@
+amit/AbstractComponents/AbstractComponents.class
+amit/pageObjects/ProductCatalogue.class
+amit/pageObjects/OrderPage.class
+amit/pageObjects/OrderCatalogue.class
+amit/pageObjects/CartCatalogue.class
+amit/resources/ExtendReporterNG.class
+amit/pageObjects/LandingPage.class
+amit/pageObjects/ConfirmationPage.class
